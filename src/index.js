@@ -14,8 +14,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import ListePosts from './ListePosts'
-import AjoutPosts from './AjoutPosts'
+import ListePosts from './components/ListePosts'
+import AjoutPosts from './components/AjoutPosts'
 
 
 
