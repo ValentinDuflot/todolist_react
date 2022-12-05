@@ -59,7 +59,7 @@ export default function ListePosts() {
             
             {/* Pour chaque post dans la liste d'instances : */}
             {liste.map(element => (
-                <div key={element.id} className="m-1 p-2 col-sm-3 bg-secondary border border-dark rounded">
+                <div key={element.id} className="m-1 p-2 h-100 col-sm-3 bg-secondary border border-dark rounded">
                     {/* Affichage du post-it */}
                     <AfficheurPost nom={element.nom} contenu={element.contenu} dateLimite={element.dateLimite} couleur={element.couleur} cible={element} />
                     {/* Bouton de suppression du post */}
