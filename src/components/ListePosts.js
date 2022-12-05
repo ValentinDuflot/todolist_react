@@ -28,10 +28,14 @@ export default function ListePosts() {
     // array d'instances de post, initialement remplie avec les posts-types instanciés plus haut
     let [liste, setListe] = useState(listePosts);
 
+    // variable d'état de nombre de posts
+    let [nombre, setNombre] = useState(liste.length);
+
     // ajout de post
     const newPost = (nom, contenu, dateLimite, couleur) => {
         const newListe = liste.concat(new Post(nom, contenu, dateLimite, couleur));
         setListe(newListe);
+        setNombre(newListe.length)
     }
 
     // enregistrement de la fonction d'ajout de post
@@ -43,11 +47,15 @@ export default function ListePosts() {
             return value.id !== element.id;
         })
         setListe(liste)
+        setNombre(liste.length)
     }
+    
 
     // self-explanatory
     return (
         <div className="row justify-content-center ">
+            <p>{nombre} tâches restantes</p>
+            
             {/* Pour chaque post dans la liste d'instances : */}
             {liste.map(element => (
                 <div key={element.id} className="m-1 p-2 col-sm-3 bg-secondary border border-dark rounded">
