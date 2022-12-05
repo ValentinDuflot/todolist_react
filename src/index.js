@@ -25,7 +25,7 @@ function AfficheurPost(props){
   const [etat,setEtat] = useState(cible.modification);
 
   const handleClick = event => {
-    if(cible.modification == false){
+    if(etat === false){
       cible.modification = true;
       setEtat(true);
 
@@ -36,14 +36,10 @@ function AfficheurPost(props){
     }
   };
 
-  const handleClickDelete = event => {
-    listePosts.deletePost(cible.id);
-  };
-
   
   return(
     <div>
-      {cible.modification == false && (<>
+      {cible.modification === false && (<>
       <h3 className="card-title">{nom}</h3>
       <p className="card-text">{contenu}</p>
       <p className="card-text">Date limite : {dateLimite}</p>
@@ -88,7 +84,7 @@ function AfficheurPost(props){
         value={couleur}
         onChange={(event) => setCouleur(event.target.value)}
       ></input>
-      <input style={{backgroundColor:couleur}} className="btn  w-100" type="submit" onClick ={(handleClick)}/>
+      <input style={{backgroundColor:couleur}} className="btn w-100" type="submit" onClick ={(handleClick)}/>
       
     </form>
       </>)
@@ -117,11 +113,6 @@ function ListePosts() {
   }
   fonctionAjout = newPost;
 
-  
-  const getPostByID = (id) => {
-    return liste.find(element => element.id == id);
-  }
-
   const deletePost = (element) => {
     liste = liste.filter(function(value,index,arr){
       return value.id!==element.id;
@@ -138,7 +129,7 @@ function ListePosts() {
     <div className="container-fluid" > 
       <div className="row">
         {liste.map(element => (
-          <div key={element.id} className="m-1 p-2 col-sm-3 text-center bg-secondary">
+          <div key={element.id} className="m-1 p-2 col-sm-3 text-center bg-secondary border border-dark rounded">
             <AfficheurPost  nom={element.nom} contenu={element.contenu} dateLimite={element.dateLimite} couleur={element.couleur} cible={element} />
             <button style={{backgroundColor:"red"}}className="btn w-100" onClick={() => deletePost(element)}> supprimer</button>
           </div>
