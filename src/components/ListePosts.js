@@ -14,9 +14,10 @@ import AfficheurPost from './AfficheurPost'
 // Création d'un array contenant des posts-types,
 // afin que la page ne soit pas vide lors du premier chargement
 let listePosts = []
-listePosts.push(new Post("titre 1", "test contenu1 testcontenu1 test contenu1", "2022-06-12T19:30", "#f6b73c"))
-listePosts.push(new Post("titre 2", "test contenu2 testcontenu2 test contenu2", "2022-06-12T19:30", "#f6b73c"))
-listePosts.push(new Post("titre 3", "test contenu3 testcontenu3 test contenu3", "2022-06-12T19:30", "#f6b73c"))
+listePosts.push(new Post("titre 1", "Irure esse culpa ullamco enim ad consequat Lorem magna occaecat Lorem ex fugiat fugiat nisi.", "2022-06-12T19:30", "#f6b73c"))
+listePosts.push(new Post("titre 2", "Sit tempor tempor id qui consectetur exercitation occaecat est nostrud.", "2022-06-12T19:30", "#f6b73c"))
+listePosts.push(new Post("titre 3", "Et ex officia labore occaecat mollit ex anim minim.", "2022-06-12T19:30", "#f6b73c"))
+
 
 // référence à la fonction d'ajout de post, 
 // puisqu'elle doit être utilisable hors de la fonction
