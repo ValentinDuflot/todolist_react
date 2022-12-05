@@ -7,7 +7,7 @@
 
 // imports nécessaires
 import React, { useState } from 'react';
-import Post from '../Post'
+import Post from '../classes/Post'
 import AfficheurPost from './AfficheurPost'
 
 
