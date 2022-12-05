@@ -42,7 +42,7 @@ export default function AfficheurPost(props){
         {/* Affichage du post-it, si cible.modification est à false, avec bouton de modification */}
         {cible.modification === false && (<>
         
-        <input className="mx-2" style={{"transform": "scale(2)"}} id="checkbox-h3" type="checkbox" defaultChecked={false} />
+        <input className="mx-2" style={{"transform": "scale(2)"}} id="checkbox-h3" type="checkbox" defaultChecked={false} onChange={(e) => {setAccompli(e.target.value)}} />
         <label htmlFor="checkbox-h3">
         <h3 className="card-title">{nom}</h3>
         </label>
