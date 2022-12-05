@@ -61,7 +61,7 @@ export default function ListePosts() {
             {liste.map(element => (
                 <div key={element.id} className="m-1 p-2 h-100 col-sm-3 bg-secondary border border-dark rounded">
                     {/* Affichage du post-it */}
-                    <AfficheurPost nom={element.nom} contenu={element.contenu} dateLimite={element.dateLimite} couleur={element.couleur} cible={element} />
+                    <AfficheurPost cible={element} />
                     {/* Bouton de suppression du post */}
                     <button style={{ backgroundColor: "red" }} className="btn w-100" onClick={() => deletePost(element)}> supprimer</button>
                 </div>

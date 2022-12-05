@@ -16,11 +16,12 @@ export default function AfficheurPost(props){
     let cible = props.cible;
 
     // variables d'état. 
-    const [nom, setNom] = useState(props.nom);
-    const [contenu, setContenu] = useState(props.contenu);
-    const [dateLimite, setDateLimite] = useState(props.dateLimite);
-    const [couleur, setCouleur] = useState(props.couleur);
+    const [nom, setNom] = useState(cible.nom);
+    const [contenu, setContenu] = useState(cible.contenu);
+    const [dateLimite, setDateLimite] = useState(cible.dateLimite);
+    const [couleur, setCouleur] = useState(cible.couleur);
     const [etat,setEtat] = useState(cible.modification); // affichage du post si false, modification si true
+    const [accompli, setAccompli] = useState(cible.accompli);
   
     // switch cible.modification entre true et false, donc entre affichage et modification
     const handleClick = event => {

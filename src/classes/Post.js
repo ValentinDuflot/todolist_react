@@ -14,5 +14,6 @@ export default class Post {
         this.couleur = couleur;
         this.id = crypto.randomUUID(); // pour les clés uniques dans les map. 
         this.modification = false; // à true lorsque l'utilisateur souhaite modifier le contenu du post courant.
+        this.accompli = false;
     }
 }
