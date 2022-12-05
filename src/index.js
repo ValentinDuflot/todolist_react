@@ -23,8 +23,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // Appel des fonctions d'affichage de formulaire d'ajout et de liste d'instances de post
 root.render(
-  <div className="container-fluid text-center w-75">
-    <AjoutPosts/>
-    <ListePosts/>
-  </div>
+
+  <>
+    <div className="container-fluid text-center w-75 sticky-top bg-light">
+      <AjoutPosts />
+    </div>
+    <div className="container-fluid text-center w-75">
+      <ListePosts />
+    </div>
+  </>
 );
