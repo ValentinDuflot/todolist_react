@@ -47,7 +47,7 @@ export default function AjoutPosts() {
     let [dateLimite, setDateLimite] = useState(dateTime); // intilisé à la date/heure actuelle. A PRIORI FONCTIONNEL, NON TESTE
     let [couleur, setCouleur] = useState("#f6b73c");
 
- 
+
     // fonction d'ajout de post, invoquée lors de l'envoi du formulaire
     const ajoutPost = () => {
         toggleAjout(false);
@@ -89,6 +89,7 @@ export default function AjoutPosts() {
                             type="color"
                             name="couleur"
                             value={couleur}
+                            style={{"position":"relative","top":"5px"}}
                             onChange={(event) => setCouleur(event.target.value)}
                         ></input>
 
