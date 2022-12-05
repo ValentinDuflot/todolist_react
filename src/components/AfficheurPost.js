@@ -41,7 +41,11 @@ export default function AfficheurPost(props){
       <div style={{backgroundColor:couleur}}  >
         {/* Affichage du post-it, si cible.modification est à false, avec bouton de modification */}
         {cible.modification === false && (<>
+        
+        <input className="mx-2" style={{"transform": "scale(2)"}} id="checkbox-h3" type="checkbox" defaultChecked={false} />
+        <label htmlFor="checkbox-h3">
         <h3 className="card-title">{nom}</h3>
+        </label>
         <p className="card-text">{contenu}</p>
         <p className="card-text">Date limite : {dateLimite}</p>
         
