@@ -37,14 +37,14 @@ export default function AfficheurPost(props){
   
     // self-explanatory...
     return(
-      <div>
+      <div style={{backgroundColor:couleur}}  >
         {/* Affichage du post-it, si cible.modification est à false, avec bouton de modification */}
         {cible.modification === false && (<>
         <h3 className="card-title">{nom}</h3>
         <p className="card-text">{contenu}</p>
         <p className="card-text">Date limite : {dateLimite}</p>
         
-        <button style={{backgroundColor:couleur}} className="btn  w-100" onClick ={(handleClick)}> modifier </button>
+        <button className="btn  btn-primary w-100" onClick ={(handleClick)}> modifier </button>
         </>)}
   
         {/* Affichage du formulaire de moficiation du post-it */}
@@ -86,7 +86,7 @@ export default function AfficheurPost(props){
           onChange={(event) => setCouleur(event.target.value)}
         ></input>
         {/* Bouton de validation de la modification */}
-        <input style={{backgroundColor:couleur}} className="btn w-100" type="submit" onClick ={(handleClick)}/>
+        <input  className="btn btn-primary w-100" type="submit" onClick ={(handleClick)}/>
         
       </form>
         </>)

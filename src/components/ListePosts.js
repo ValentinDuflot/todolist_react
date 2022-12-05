@@ -14,9 +14,9 @@ import AfficheurPost from './AfficheurPost'
 // Création d'un array contenant des posts-types,
 // afin que la page ne soit pas vide lors du premier chargement
 let listePosts = []
-listePosts.push(new Post("titre 1", "test contenu1testcontenu1test contenu1", "2022-06-12T19:30", "#f6b73c"))
-listePosts.push(new Post("titre 2", "test contenu2testcontenu2test contenu2", "2022-06-12T19:30", "#f6b73c"))
-listePosts.push(new Post("titre 3", "test contenu3testcontenu3test contenu3", "2022-06-12T19:30", "#f6b73c"))
+listePosts.push(new Post("titre 1", "test contenu1 testcontenu1 test contenu1", "2022-06-12T19:30", "#f6b73c"))
+listePosts.push(new Post("titre 2", "test contenu2 testcontenu2 test contenu2", "2022-06-12T19:30", "#f6b73c"))
+listePosts.push(new Post("titre 3", "test contenu3 testcontenu3 test contenu3", "2022-06-12T19:30", "#f6b73c"))
 
 // référence à la fonction d'ajout de post, 
 // puisqu'elle doit être utilisable hors de la fonction
@@ -47,18 +47,16 @@ export default function ListePosts() {
 
     // self-explanatory
     return (
-        <div  >
-            <div className="row justify-content-center">
-                {/* Pour chaque post dans la liste d'instances : */}
-                {liste.map(element => (
-                    <div key={element.id} className="m-1 p-2 col-sm-3 bg-secondary border border-dark rounded">
-                        {/* Affichage du post-it */}
-                        <AfficheurPost nom={element.nom} contenu={element.contenu} dateLimite={element.dateLimite} couleur={element.couleur} cible={element} />
-                        {/* Bouton de suppression du post */}
-                        <button style={{ backgroundColor: "red" }} className="btn w-100" onClick={() => deletePost(element)}> supprimer</button>
-                    </div>
-                ))}
-            </div>
+        <div className="row justify-content-center ">
+            {/* Pour chaque post dans la liste d'instances : */}
+            {liste.map(element => (
+                <div key={element.id} className="m-1 p-2 col-sm-3 bg-secondary border border-dark rounded">
+                    {/* Affichage du post-it */}
+                    <AfficheurPost nom={element.nom} contenu={element.contenu} dateLimite={element.dateLimite} couleur={element.couleur} cible={element} />
+                    {/* Bouton de suppression du post */}
+                    <button style={{ backgroundColor: "red" }} className="btn w-100" onClick={() => deletePost(element)}> supprimer</button>
+                </div>
+            ))}
         </div>
 
     );
