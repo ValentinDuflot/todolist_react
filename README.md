@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# TODOLIST - REACT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cette application est une preuve de concept d'une todolist simple, codée en JS, avec React et Bootstrap.
+Elle est brute, non raffinée. 
 
 ## Available Scripts
 
