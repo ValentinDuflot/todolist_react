@@ -44,7 +44,7 @@ export default function AjoutPosts() {
     // variables d'état
     let [titre, setTitre] = useState("Titre");
     let [contenu, setContenu] = useState("Contenu");
-    let [dateLimite, setDateLimite] = useState(dateTime); // intilisé à la date/heure actuelle
+    let [dateLimite, setDateLimite] = useState(dateTime); // intilisé à la date/heure actuelle. A PRIORI FONCTIONNEL, NON TESTE
     let [couleur, setCouleur] = useState("#f6b73c");
 
  
